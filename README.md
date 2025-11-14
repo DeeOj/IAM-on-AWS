@@ -30,25 +30,30 @@ To ensure the IAM policies worked as intended, the AWS Policy Simulator tool was
 <img src="https://imgur.com/NXZkT2Q.jpg" height="90%", width="90%">
 </p>
 
-- production tag
+-- Production tag (a label I assigned to this AWS instance with name "Environment" and value "production" which will aid in my policy creatiom)
   
 <p align="center">
 <img src="https://imgur.com/xVdGOw5.jpg" height="90%", width="90%">
 </p>
 
-- development tag
-- 
+- Development tag (Same concept, with value "development")
+ 
 <p align="center">
 <img src="https://imgur.com/q0jcP7X.jpg" height="90%", width="90%">
 </p>
 
-- creating policy
-  
+- Creating policy
+
+This allows any actions that can be possibly taken on an EC2 instance, where the resource is conditioned by a tag "development". So they (new IAM users) can perform any actions in the development environment, they can edit, and even stop EC2 instances.
+
+Furthermore, they are denied certain actions such as "DeleteTags" and "CreateTags" in any resource.
+
 <p align="center">
 <img src="https://imgur.com/UEAxrRm.jpg" height="90%", width="90%">
 </p>
 
-- Review of policy
+- Review of policy.
+  
 <p align="center">
 <img src="https://imgur.com/MO3YFpr.jpg" height="90%", width="90%">
 </p>
@@ -57,7 +62,7 @@ To ensure the IAM policies worked as intended, the AWS Policy Simulator tool was
 <img src="https://imgur.com/UyO9Q8k.jpg" height="90%", width="90%">
 </p>
 
-- Dev user group creation
+- Created the User group and attached the policy created to it.
 
 <p align="center">
 <img src="https://imgur.com/vFV94UP.jpg" height="90%", width="90%">
@@ -67,11 +72,12 @@ To ensure the IAM policies worked as intended, the AWS Policy Simulator tool was
 <img src="https://imgur.com/WT6ecmh.jpg" height="90%", width="90%">
 </p>
 
+- User group created, with no users yet.
 <p align="center">
 <img src="https://imgur.com/o4NyO59.jpg" height="90%", width="90%">
 </p>
 
--  creating iam user
+-  Created IAM users, and ensured they changed their passwords on their first login. Also, added them to the IAM user group earlier created.
   
 <p align="center">
 <img src="https://imgur.com/XxKNqaL.jpg" height="90%", width="90%">
@@ -85,22 +91,24 @@ To ensure the IAM policies worked as intended, the AWS Policy Simulator tool was
 <img src="https://imgur.com/taaDa9c.jpg" height="90%", width="90%">
 </p>
 
-- Testing user creds
+
+- Testing User credentials
+  
 <p align="center">
 <img src="https://imgur.com/OAfUNvi.jpg" height="90%", width="90%">
 </p>
 
-- password reset
+- The user is prompted to change their passwords, enhancing security.
   
 <p align="center">
-<img src="https://imgur.com/wp63lS3.jpg" height="90%", width="90%">
+<img src="https://imgur.com/5ysgpHw.jpg" height="90%", width="90%">
 </p>
 
 <p align="center">
 <img src="https://imgur.com/iSaR8kG.jpg" height="90%", width="90%">
 </p>
 
-- Policy simulator
+- Utilized Policy simulator tool to check the policy functions as it should.
   
 <p align="center">
 <img src="https://imgur.com/GI3Ok2Q.jpg" height="90%", width="90%">
@@ -112,13 +120,13 @@ To ensure the IAM policies worked as intended, the AWS Policy Simulator tool was
 <img src="https://imgur.com/WAeEAeV.jpg" height="90%", width="90%">
 </p>
 
-- Development
+- In the policy, it is defined that these users are permitted any action but "DeleteTags" and "CreateTags" in the Development environment, and that reflects in this simulation result. 
   
 <p align="center">
 <img src="https://imgur.com/8i6RZgV.jpg" height="90%", width="90%">
 </p>
 
-- Production
+- In the Production, they are even more restricted, as they are denied the ability of stopping EC2 instances.
   
 <p align="center">
 <img src="https://imgur.com/o50SYZ1.jpg" height="90%", width="90%">
