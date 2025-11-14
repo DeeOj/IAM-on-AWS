@@ -30,7 +30,7 @@ To ensure the IAM policies worked as intended, the AWS Policy Simulator tool was
 <img src="https://imgur.com/NXZkT2Q.jpg" height="90%", width="90%">
 </p>
 
--- Production tag (a label I assigned to this AWS instance with name "Environment" and value "production" which will aid in my policy creatiom)
+- Production tag (a label I assigned to this AWS instance with name "Environment" and value "production" which will aid in my policy creatiom)
   
 <p align="center">
 <img src="https://imgur.com/xVdGOw5.jpg" height="90%", width="90%">
