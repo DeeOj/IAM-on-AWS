@@ -132,3 +132,10 @@ Furthermore, they are denied certain actions such as "DeleteTags" and "CreateTag
 <img src="https://imgur.com/o50SYZ1.jpg" height="90%", width="90%">
 </p>
 
+## Results
+
+The setup successfully restricted lower-privileged users from stopping or deleting production EC2 instances, while administrators retained full permissions. The IAM policy performed as expected, and validation with the Policy Simulator confirmed that all permissions were applied accurately.
+
+## Conclusion
+
+This project demonstrated how IAM policies, groups, and user management can protect critical AWS resources from accidental or unauthorized changes. By combining IAM configurations with verification tools like the Policy Simulator and enforcing password resets on first login, the environment achieved a well-structured and secure access control model.
