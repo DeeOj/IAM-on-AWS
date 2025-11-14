@@ -21,6 +21,9 @@ New IAM users were created and added to the group, two new junior dev hires. Eac
 To ensure the IAM policies worked as intended, the AWS Policy Simulator tool was used to test and validate what actions were permitted or denied for these users in the group. This confirmed that restrictions applied correctly and that only authorized users retained full administrative privileges.
 
 ## Task Diagram
+<p align="center">
+<img src="https://imgur.com/WS9NkEY.jpg" height="90%", width="90%">
+</p>
 
 ## Procedure
 
